@@ -1,4 +1,3 @@
-
 class Counter extends React.Component{
     constructor(props) {
         super(props);
@@ -27,7 +26,18 @@ class Counter extends React.Component{
         console.log('handleMinusOne correct')
     }
     handleReset(){
+        this.setState(()=>{
+            return{
+                count: 0
+            }
+        });
         console.log('handleReset correct')
+        // this.setState({
+        //     count: 0
+        // });
+        // this.setState({
+        //     count: this.state.count + 1
+        // });
     }
     render() {
         return (
